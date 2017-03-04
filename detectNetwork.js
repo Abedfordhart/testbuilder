@@ -25,23 +25,3 @@ var detectNetwork = function(cardNumber) {
     return "Visa"
   }
 };
-
-console.log("---DINER CLUB TEST---");
-console.log(detectNetwork('38345678901234'));
-console.log(detectNetwork('39345678901234'));
-
-console.log("---AMERICAN EXPRESS TEST---");
-console.log(detectNetwork('343456789012345'));
-console.log(detectNetwork('373456789012345'));
-
-console.log("---VISA TEST---");
-console.log(detectNetwork('4123456789012'));
-console.log(detectNetwork('4123456789012345'));
-console.log(detectNetwork('4123456789012345678'));
-
-console.log("---MASTERCARD TEST");
-console.log(detectNetwork('5112345678901234'));
-console.log(detectNetwork('5212345678901234'));
-console.log(detectNetwork('5312345678901234'));
-console.log(detectNetwork('5412345678901234'));
-console.log(detectNetwork('5512345678901234'));
