@@ -29,18 +29,14 @@ var detectNetwork = function(cardNumber) {
           +cardNumber.substring(0,1) === 4 && cardNumber.length === 19){
             return "Visa";
           }
-  else if(+cardNumber.substring(0,2) === 51 && cardNumber.length === 16 ||
-  	      +cardNumber.substring(0,2) === 52 && cardNumber.length === 16 ||
-          +cardNumber.substring(0,2) === 53 && cardNumber.length === 16 ||
-  	      +cardNumber.substring(0,2) === 54 && cardNumber.length === 16 ||
-          +cardNumber.substring(0,2) === 55 && cardNumber.length === 16){
+  else if(+cardNumber.substring(0,2) >= 51 && +cardNumber.substring(0,2) <= 55 && cardNumber.length === 16){
           	return "MasterCard";
           }
   else if(+cardNumber.substring(0,4) === 6011 && cardNumber.length === 16 ||
   				+cardNumber.substring(0,4) === 6011 && cardNumber.length === 19 ||
   	      +cardNumber.substring(0,3) >= 644 && +cardNumber.substring(0,3) <= 649 && cardNumber.length === 16 ||
           +cardNumber.substring(0,3) >= 644 && +cardNumber.substring(0,3) <= 649 && cardNumber.length === 19 ||
-  	      +cardNumber.substring(0,2) === 65 && cardNumber.length === 15 ||
+  	      +cardNumber.substring(0,2) === 65 && cardNumber.length === 16 ||
           +cardNumber.substring(0,2) === 65 && cardNumber.length === 19){
           return "Discover"
           }
@@ -52,32 +48,32 @@ var detectNetwork = function(cardNumber) {
           }
 };
 
-console.log("---DINER CLUB TEST---");
-console.log(detectNetwork('38345678901234'));
-console.log(detectNetwork('39345678901234'));
-
-console.log("---AMERICAN EXPRESS TEST---");
-console.log(detectNetwork('343456789012345'));
-console.log(detectNetwork('373456789012345'));
-
-console.log("---VISA TEST---");
-console.log(detectNetwork('4123456789012'));
-console.log(detectNetwork('4123456789012345'));
-console.log(detectNetwork('4123456789012345678'));
-
-console.log("---MASTERCARD TEST---");
-console.log(detectNetwork('5112345678901234'));
-console.log(detectNetwork('5212345678901234'));
-console.log(detectNetwork('5312345678901234'));
-console.log(detectNetwork('5412345678901234'));
-console.log(detectNetwork('5512345678901234'));
-
-console.log("---DISCOVER TEST---");
-console.log(detectNetwork('6011123456789098'));
-console.log(detectNetwork('6451234567890987654'));
-console.log(detectNetwork('651234567890987'));
-
-console.log("---MAESTRO TEST---");
-console.log(detectNetwork('5020123456789098765'));
-console.log(detectNetwork('630412345678'));
-console.log(detectNetwork('503812345678909'));
+// console.log("---DINER CLUB TEST---");
+// console.log(detectNetwork('38345678901234'));
+// console.log(detectNetwork('39345678901234'));
+//
+// console.log("---AMERICAN EXPRESS TEST---");
+// console.log(detectNetwork('343456789012345'));
+// console.log(detectNetwork('373456789012345'));
+//
+// console.log("---VISA TEST---");
+// console.log(detectNetwork('4123456789012'));
+// console.log(detectNetwork('4123456789012345'));
+// console.log(detectNetwork('4123456789012345678'));
+//
+// console.log("---MASTERCARD TEST---");
+// console.log(detectNetwork('5112345678901234'));
+// console.log(detectNetwork('5212345678901234'));
+// console.log(detectNetwork('5312345678901234'));
+// console.log(detectNetwork('5412345678901234'));
+// console.log(detectNetwork('5512345678901234'));
+//
+// console.log("---DISCOVER TEST---");
+// console.log(detectNetwork('6011123456789098'));
+// console.log(detectNetwork('6451234567890987654'));
+// console.log(detectNetwork('6512345678909876'));
+//
+// console.log("---MAESTRO TEST---");
+// console.log(detectNetwork('5020123456789098765'));
+// console.log(detectNetwork('630412345678'));
+// console.log(detectNetwork('503812345678909'));
